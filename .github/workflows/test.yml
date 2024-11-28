@@ -19,7 +19,7 @@ jobs:
         # this will use the latest Node 14 version
         node-version: 14
     # install dependencies using clean install to avoid package lock updates
-    - run: npm ci
+    - run: npm install
     # build the project if necessary
     - run: npm run build --if-present
     # finally run the test
