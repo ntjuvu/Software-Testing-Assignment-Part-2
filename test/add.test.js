@@ -5,7 +5,7 @@ import { expect } from 'chai';
 import add from '../src/add.js';
 
 // Tests created for add.js function
-describe('Addition', function() {
+describe('add.js', function() {
 
     // Adding two positive numbers
     it('add.js: two positive numbers', function() {

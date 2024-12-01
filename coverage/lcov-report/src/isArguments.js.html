@@ -3,7 +3,7 @@
 <html lang="en">
 
 <head>
-    <title>Code coverage report for src/isSymbol.js</title>
+    <title>Code coverage report for src/isArguments.js</title>
     <meta charset="utf-8" />
     <link rel="stylesheet" href="../prettify.css" />
     <link rel="stylesheet" href="../base.css" />
@@ -19,34 +19,34 @@
 <body>
 <div class='wrapper'>
     <div class='pad1'>
-        <h1><a href="../index.html">All files</a> / <a href="index.html">src</a> isSymbol.js</h1>
+        <h1><a href="../index.html">All files</a> / <a href="index.html">src</a> isArguments.js</h1>
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">100% </span>
+                <span class="strong">86.95% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>23/23</span>
-            </div>
-        
-            
-            <div class='fl pad1y space-right2'>
-                <span class="strong">50% </span>
-                <span class="quiet">Branches</span>
-                <span class='fraction'>2/4</span>
+                <span class='fraction'>20/23</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
                 <span class="strong">100% </span>
-                <span class="quiet">Functions</span>
+                <span class="quiet">Branches</span>
                 <span class='fraction'>1/1</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">100% </span>
+                <span class="strong">0% </span>
+                <span class="quiet">Functions</span>
+                <span class='fraction'>0/1</span>
+            </div>
+        
+            
+            <div class='fl pad1y space-right2'>
+                <span class="strong">86.95% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>23/23</span>
+                <span class='fraction'>20/23</span>
             </div>
         
             
@@ -103,35 +103,35 @@
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import getTag from './.internal/getTag.js'
+import isObjectLike from './isObjectLike.js'
 &nbsp;
 /**
- * Checks if `value` is classified as a `Symbol` primitive or object.
+ * Checks if `value` is likely an `arguments` object.
  *
- * @since 4.0.0
+ * @since 0.1.0
  * @category Lang
  * @param {*} value The value to check.
- * @returns {boolean} Returns `true` if `value` is a symbol, else `false`.
+ * @returns {boolean} Returns `true` if `value` is an `arguments` object, else `false`.
  * @example
  *
- * isSymbol(Symbol.iterator)
+ * isArguments(function() { return arguments }())
  * // =&gt; true
  *
- * isSymbol('abc')
+ * isArguments([1, 2, 3])
  * // =&gt; false
  */
-function isSymbol(value) {
-  const type = typeof value
-  return type == 'symbol' || (type === 'object' <span class="branch-0 cbranch-no" title="branch not covered" >&amp;&amp; value != null <span class="branch-0 cbranch-no" title="branch not covered" ></span>&amp;&amp; getTag(value) == '[object Symbol]')</span>
-}
+<span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >function isArguments(value) {</span></span>
+<span class="cstat-no" title="statement not covered" >  return isObjectLike(value) &amp;&amp; getTag(value) == '[object Arguments]'</span>
+<span class="cstat-no" title="statement not covered" >}</span>
 &nbsp;
-export default isSymbol
+export default isArguments
 &nbsp;</pre></td></tr></table></pre>
 
                 <div class='push'></div><!-- for sticky footer -->
