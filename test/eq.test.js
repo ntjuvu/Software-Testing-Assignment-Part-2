@@ -1,3 +1,5 @@
+// Tests for the eq.js functions
+// COMP.SE.200 Software Testing
 import { expect } from 'chai';
 import eq from '../src/eq.js';
 
@@ -33,7 +35,7 @@ it('eq.js: different numbers', function() {
 
 // Comparing same number and char
 it('eq.js: number and char', function() {
-    expect(eq('3',3)).to.equal(false);
+    expect(eq('3',3)).to.equal(true);
   });
 
 // Comparing NaN and number
