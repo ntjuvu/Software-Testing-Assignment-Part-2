@@ -28,7 +28,7 @@ describe('toString.js', function() {
     });
 
     // -0
-    it('toString.js: boolean', function() {
+    it('toString.js: special case -0', function() {
       expect(toString(-0)).to.equal('-0');
     });
 
