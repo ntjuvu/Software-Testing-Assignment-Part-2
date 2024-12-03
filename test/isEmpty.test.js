@@ -39,4 +39,9 @@ describe('isEmpty.js', function() {
       expect(isEmpty(map)).to.equal(false);
     });
 
+    // Key pair
+    it('isEmpty.js: key pair', function() {
+      expect(isEmpty({a:1})).to.equal(false);
+    });
+
 });

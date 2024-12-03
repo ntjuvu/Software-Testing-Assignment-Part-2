@@ -14,7 +14,7 @@ describe('isDate.js', function() {
 
     // An invalid date object
     it('isDate.js: invalid date object', function() {
-      expect(isDate(new Date('invalid'))).to.equal(true);
+      expect(isDate(new Date('invalid'))).to.equal(false);
     });
 
     // A string date
